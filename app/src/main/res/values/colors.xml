@@ -5,6 +5,12 @@
     <color name="colorAccent">#FF4081</color>
 
 
+    <color name="card_result_gradient_start">#00000000</color>
+    <color name="card_result_gradient_center">#66000000</color>
+    <color name="card_result_gradient_end">#FF000000</color>
+
+    <color name="card_result_text_background">#99333333</color>
+
     <!-- Black -->
     <color name="black">#000000</color>
 

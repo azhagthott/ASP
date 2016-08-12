@@ -17,7 +17,6 @@ public class MainMapFragment extends Fragment implements OnMapReadyCallback {
     private MapView map;
 
     public MainMapFragment() {
-        // Required empty public constructor
     }
 
 

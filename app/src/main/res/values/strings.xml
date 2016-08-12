@@ -100,4 +100,11 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_about_user">AboutUserActivity</string>
+
+
+    <string name="about_user_sex">Genero</string>
+    <string name="about_user_age">Edad</string>
+    <string name="about_user_country">País</string>
+
 </resources>

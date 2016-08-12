@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import com.github.paolorotolo.appintro.AppIntro;
+import com.zecovery.android.dev.asp.activity.AboutUserActivity;
 import com.zecovery.android.dev.asp.activity.MainActivity;
 import com.zecovery.android.dev.asp.activity.SearchActivity;
 
@@ -39,7 +40,7 @@ public class IntroActivity extends AppIntro {
     @Override
     public void onDonePressed(Fragment currentFragment) {
         super.onDonePressed(currentFragment);
-        startActivity(new Intent(IntroActivity.this, SearchActivity.class));
+        startActivity(new Intent(IntroActivity.this, AboutUserActivity.class));
     }
 
 }

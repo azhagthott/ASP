@@ -1,5 +1,7 @@
 package com.zecovery.android.dev.asp.main;
 
+import android.widget.ImageView;
+
 /**
  * Created by fran on 03-08-16.
  */
@@ -13,8 +15,14 @@ public class Area {
     private String areaInfo;
     private float areaLat;
     private float areaLng;
+    private int getAreaPhoto;
 
     public Area() {
+    }
+
+    public Area(String areaName, int getAreaPhoto) {
+        this.areaName = areaName;
+        this.getAreaPhoto = getAreaPhoto;
     }
 
     public int getAreaId() {
@@ -71,5 +79,13 @@ public class Area {
 
     public void setAreaLng(float areaLng) {
         this.areaLng = areaLng;
+    }
+
+    public int getAreaPhoto() {
+        return getAreaPhoto;
+    }
+
+    public void setAreaPhoto(int imageViewAreaPhoto) {
+        this.getAreaPhoto = imageViewAreaPhoto;
     }
 }

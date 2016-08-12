@@ -1,16 +1,22 @@
 package com.zecovery.android.dev.asp.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.zecovery.android.dev.asp.R;
+import com.zecovery.android.dev.asp.adapter.AreaCardViewAdapter;
+import com.zecovery.android.dev.asp.main.Area;
 
-public class ResultActivity extends BaseActivity implements View.OnClickListener{
+import java.util.ArrayList;
+import java.util.List;
 
-    private ImageView image1;
+public class ResultActivity extends BaseActivity implements View.OnClickListener {
+
+    private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,21 +24,28 @@ public class ResultActivity extends BaseActivity implements View.OnClickListener
         setContentView(R.layout.activity_result);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        image1 = (ImageView) findViewById(R.id.image1);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
 
-        image1.setOnClickListener(this);
-
+        recyclerView.setAdapter(new AreaCardViewAdapter(areaArrayList()));
     }
 
     @Override
     public void onClick(View view) {
+    }
 
-        switch (view.getId()){
-            case R.id.image1:
-                startActivity(new Intent(ResultActivity.this, DetailedActivity.class));
-        }
+    private ArrayList<Area> areaArrayList() {
+
+        ArrayList<Area> areas = new ArrayList<>();
+
+        areas.add(new Area("Torres del Paine", R.drawable.torres_del_paine));
+        areas.add(new Area("Caleta Tortel", R.drawable.caleta_tortel));
+        areas.add(new Area("Carretera Austral", R.drawable.carretera_austral));
+        areas.add(new Area("Laguna San Rafael", R.drawable.laguna_san_rafael));
+
+        return areas;
     }
 }
