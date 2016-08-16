@@ -8,8 +8,6 @@ import android.support.v4.app.Fragment;
 
 import com.github.paolorotolo.appintro.AppIntro;
 import com.zecovery.android.dev.asp.activity.AboutUserActivity;
-import com.zecovery.android.dev.asp.activity.MainActivity;
-import com.zecovery.android.dev.asp.activity.SearchActivity;
 
 public class IntroActivity extends AppIntro {
 
@@ -23,9 +21,9 @@ public class IntroActivity extends AppIntro {
         addSlide(new IntroFragment4());
 
         showSkipButton(false);
+        showStatusBar(false);
         setProgressButtonEnabled(true);
         setFadeAnimation();
-
     }
 
     @Override
@@ -41,6 +39,7 @@ public class IntroActivity extends AppIntro {
     public void onDonePressed(Fragment currentFragment) {
         super.onDonePressed(currentFragment);
         startActivity(new Intent(IntroActivity.this, AboutUserActivity.class));
+        finish();
     }
 
 }

@@ -14,7 +14,8 @@ import android.view.MenuItem;
 
 import com.zecovery.android.dev.asp.R;
 import com.zecovery.android.dev.asp.fragment.GalleryFragment;
-import com.zecovery.android.dev.asp.fragment.MainMapFragment;
+import com.zecovery.android.dev.asp.fragment.InfoFragment;
+import com.zecovery.android.dev.asp.fragment.ProfileFragment;
 
 public class MainActivity extends BaseActivity {
 
@@ -83,38 +84,32 @@ public class MainActivity extends BaseActivity {
     }
 
     public void selectDrawerItem(MenuItem item) {
-        // Handle navigation view item clicks here.
+
         int id = item.getItemId();
 
-        Class fragmenClass;
+        Class fragmentClass;
         Fragment fragment = null;
 
-
-        switch (item.getItemId()) {
+        switch (id) {
             case 0:
-                fragmenClass = MainMapFragment.class;
+                fragmentClass = InfoFragment.class;
                 break;
             case 1:
-                fragmenClass = GalleryFragment.class;
+                fragmentClass = GalleryFragment.class;
                 break;
             case 2:
-                fragmenClass = GalleryFragment.class;
+                fragmentClass = ProfileFragment.class;
                 break;
             default:
-                fragmenClass = GalleryFragment.class;
+                fragmentClass = InfoFragment.class;
                 break;
-
         }
 
         try {
-
-            fragment = (Fragment) fragmenClass.newInstance();
-
-
+            fragment = (Fragment) fragmentClass.newInstance();
         } catch (Exception e) {
             Log.d(LOG_TAG, "Exception: " + e);
         }
-
 
         FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction().replace(R.id.content_main, fragment).commit();

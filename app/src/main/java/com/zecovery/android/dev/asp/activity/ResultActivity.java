@@ -4,16 +4,14 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.zecovery.android.dev.asp.R;
 import com.zecovery.android.dev.asp.adapter.AreaCardViewAdapter;
 import com.zecovery.android.dev.asp.main.Area;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class ResultActivity extends BaseActivity implements View.OnClickListener {
+public class ResultActivity extends BaseActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -27,14 +25,12 @@ public class ResultActivity extends BaseActivity implements View.OnClickListener
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
         recyclerView.setAdapter(new AreaCardViewAdapter(areaArrayList()));
-    }
 
-    @Override
-    public void onClick(View view) {
     }
 
     private ArrayList<Area> areaArrayList() {

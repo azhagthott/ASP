@@ -23,22 +23,41 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+
         <activity
             android:name=".activity.LaunchScreenActivity"
-            android:label="@string/app_name"
+            android:label="@string/title_activity_launcher"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".intro.IntroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".activity.AboutUserActivity"
+            android:label="@string/title_activity_about_user"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".activity.SearchActivity"
             android:label="@string/title_activity_search"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".intro.IntroActivity" />
+            android:parentActivityName=".activity.AboutUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.zecovery.android.dev.asp.activity.AboutUserActivity" />
+        </activity>
+
         <activity
             android:name=".activity.ResultActivity"
             android:label="@string/title_activity_result"
@@ -48,6 +67,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.zecovery.android.dev.asp.activity.SearchActivity" />
         </activity>
+
         <activity
             android:name=".activity.DetailedActivity"
             android:label="@string/title_activity_detailed"
@@ -57,6 +77,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.zecovery.android.dev.asp.activity.ResultActivity" />
         </activity>
+
         <activity
             android:name=".activity.MainActivity"
             android:label="@string/title_activity_main"
@@ -66,10 +87,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.zecovery.android.dev.asp.activity.DetailedActivity" />
         </activity>
-        <activity
-            android:name=".activity.AboutUserActivity"
-            android:label="@string/title_activity_about_user"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
     </application>
 
 </manifest>

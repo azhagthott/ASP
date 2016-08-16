@@ -2,6 +2,7 @@ package com.zecovery.android.dev.asp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,7 +15,7 @@ import com.zecovery.android.dev.asp.R;
 public class SearchActivity extends BaseActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     private Spinner spinnerRegion;
-    private Button button;
+    private Button buttonContinue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,8 @@ public class SearchActivity extends BaseActivity implements AdapterView.OnItemSe
         spinnerRegion.setAdapter(adapter);
         spinnerRegion.setOnItemSelectedListener(this);
 
-        button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(this);
+        buttonContinue = (Button) findViewById(R.id.buttonContinue);
+        buttonContinue.setOnClickListener(this);
     }
 
     @Override
@@ -48,8 +49,10 @@ public class SearchActivity extends BaseActivity implements AdapterView.OnItemSe
     public void onClick(View view) {
 
         switch (view.getId()) {
-            case R.id.button:
-                startActivity(new Intent(SearchActivity.this, ResultActivity.class));
+            case R.id.buttonContinue:
+
+                Intent intent = new Intent(SearchActivity.this, ResultActivity.class);
+                ActivityCompat.startActivity(this, intent, null);
                 break;
         }
     }

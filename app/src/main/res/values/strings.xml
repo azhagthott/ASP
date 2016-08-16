@@ -1,10 +1,41 @@
 <resources>
     <string name="app_name">ASP</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_search">Busqueda de areas</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--UI Lancher-->
+    <string name="title_activity_launcher">Parques y Reservas Nacionales de Chile</string>
+    <string name="content_description_launcher_logo">app logo</string>
+
+    <!--UI Intro-->
+    <string name="title_activity_intro">Intro</string>
+    <string name="fragment_intro_1">Fragment 1</string>
+    <string name="fragment_intro_2">Fragment 2</string>
+    <string name="fragment_intro_3">Fragment 3</string>
+    <string name="fragment_intro_4">Fragment 4</string>
+
+    <!--UI About user-->
+    <string name="title_activity_about_user">Cuéntanos sobre ti</string>
+    <string name="about_user_sex">Genero</string>
+    <string name="about_user_age">Edad</string>
+    <string name="about_user_country">País</string>
+    <string name="about_user_button">Continuar</string>
+    <string name="about_user_transition_search_button">about_user_search_button</string>
+
+    <!--UI Search -->
+    <string name="title_activity_search">Busqueda de áreas</string>
+    <string name="search_name">Nombre o concepto</string>
+    <string name="search_interest">Interes</string>
+    <string name="search_sector">Seleccione región</string>
+    <string name="search_button">Continuar</string>
+
+    <!--UI Result -->
+
+    <!--UI Detail -->
+    <string name="detail_transition_main_image">detail_main_image</string>
+
+
+    <!--UI Main -->
+
     <string name="title_activity_result">Resultado</string>
     <string name="title_activity_detailed">Detalle</string>
     <string name="large_text">
@@ -100,11 +131,6 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="title_activity_about_user">AboutUserActivity</string>
 
-
-    <string name="about_user_sex">Genero</string>
-    <string name="about_user_age">Edad</string>
-    <string name="about_user_country">País</string>
 
 </resources>

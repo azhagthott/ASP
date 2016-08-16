@@ -5,10 +5,20 @@
     android:background="@color/blue_500"
     tools:context="com.zecovery.android.dev.asp.intro.IntroFragment2">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/fragment_intro_2"
+            android:textSize="36sp" />
+
+    </RelativeLayout>
 
 </FrameLayout>
